@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block css %}
+<link rel="stylesheet" href="{{url_for('static', filename='css/quiz_top.css')}}">
+{% endblock %}
+
+{% block content %}
+<h2>単語クイズ</h2>
+<p>登録した単語の中からランダムで<br>10問出題されます。</p>
+{% if error != None %}
+<p style="color: red;">{{error}}</p>
+{% endif %}
+
+<a href="{{url_for('question')}}">
+    <div>スタート</div>
+</a>
+
+{% endblock %}

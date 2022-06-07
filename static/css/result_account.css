@@ -1,0 +1,38 @@
+@charset "utf-8";
+
+body {
+    text-align: center;
+    color: #0F2B46;
+    background-color: #f7f7f7;
+    margin: 0;
+}
+
+main h1 {
+    font-size: 4rem;
+}
+
+main a {
+    color: #fff;
+    text-decoration: none;
+    background: #0F2B46;
+    padding: 20px 100px;
+    border-radius: 10px;
+}
+
+main p {
+    margin-bottom: 40px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: #fff;
+    background-color: #0F2B46;
+}
+
+footer #copyright {
+    text-align: center;
+    width: 100%;
+    padding: 15px;
+}

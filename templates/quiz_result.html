@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block css %}
+<link rel="stylesheet" href="{{url_for('static', filename='css/quiz_result.css')}}">
+{% endblock %}
+
+{% block content %}
+<h2>結果</h2>
+<div id="title">
+    <h3>単語</h3>
+    <h3>意味</h3>
+    <h3>あなたの回答</h3>
+    <h3>結果</h3>
+</div>
+<div id="list">
+
+    {% for answer in answer_results %}
+    <dl>
+        <dt>{{answer[0]}}</dt>
+        <dd>{{answer[1]}}</dd>
+        <dd>{{answer[2]}}</dd>
+        <dd>{{answer[3]}}</dd>
+    </dl>
+    {% endfor %}
+</div>
+<p>正解数{{correct_count}}/10</p>
+
+<a href="{{url_for('quiz_top')}}">
+    <div id="button">もう一度</div>
+</a>
+{% endblock %}

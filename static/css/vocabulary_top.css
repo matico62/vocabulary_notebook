@@ -1,0 +1,118 @@
+@charset "utf-8";
+
+main {
+    width: 100%;
+    margin-bottom: 100px;
+    padding: 0;
+}
+
+main h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #0F2B46;
+}
+
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+main #list {
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    text-align: left;
+    font-size: 1em;
+    line-height: 1.3;
+    color: #444;
+    overflow: auto;
+    width: 60%;
+    height: 20em;
+    background-color: #fcfcfc;
+}
+
+main #title {
+    width: 60%;
+    color: #0F2B46;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+main #list dl {
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.5rem;
+    padding: 0.5em 0;
+    margin: 0 auto;
+}
+
+main #list dt {
+    padding-bottom: 0;
+    width: 8em;
+}
+
+main #list dl dt p {
+    margin: 0 10px;
+}
+
+@media screen and (min-width: 480px) {
+    main #list dt {
+        clear: left;
+        float: left;
+    }
+
+    main #list dd {
+        margin-left: 0.5em;
+        height: 40px;
+        white-space: nowrap;
+    }
+}
+
+main #list dl:nth-child(2n) {
+    background-color: #eee;
+}
+
+main form {
+    text-align: center;
+    margin: 10px 0;
+}
+
+main input {
+    color: #0F2B46;
+    font-size: 2.5rem;
+}
+
+@media screen and (min-width: 800px) {
+    main #button {
+        display: flex;
+    }
+
+    main #button div {
+        width: 600px;
+    }
+}
+
+main #button {
+    justify-content: space-around;
+}
+
+main #button div {
+    text-align: center;
+    background-color: #0F2B46;
+    border-radius: 10px;
+    padding: 20px 0;
+    margin: 10px 0;
+}
+
+main #button a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+main #button div:hover {
+    background-color: #006494;
+}

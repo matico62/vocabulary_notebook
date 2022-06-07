@@ -1,0 +1,96 @@
+@charset "utf-8";
+
+body {
+    color: #0F2B46;
+    text-align: center;
+    margin: 0 auto 100px;
+    background-color: #f7f7f7;
+}
+
+body div {
+    width: 60%;
+    margin: 0 auto;
+}
+
+main h1 {
+    font-size: 4rem;
+    text-align: center;
+}
+
+main h2 {
+    font-size: 2rem;
+}
+
+main form {
+    width: 340px;
+    text-align: left;
+    margin: 0 auto;
+}
+
+main input {
+    margin: 10px 0;
+    color: #0F2B46;
+}
+
+main #sub {
+    background-color: #0F2B46;
+    color: #fff;
+    font-size: 1.5rem;
+    width: 100%;
+}
+
+main a {
+    color: #fff;
+    text-decoration: none;
+    background: #0F2B46;
+    padding: 20px 100px;
+    border-radius: 10px;
+}
+
+main a:hover {
+    background-color: #006494;
+}
+
+@media screen and (min-width: 800px) {
+    main .s1 {
+        font-size: 24px;
+        display: flex;
+        align-items: center;
+    }
+}
+
+main .s1 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+main .s1:before,
+main .s1:after {
+    content: "";
+    flex-grow: 1;
+    height: 1px;
+    background: #0F2B46;
+}
+
+main .s1:before {
+    margin-right: .4em;
+}
+
+main .s1:after {
+    margin-left: .4em;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: #fff;
+    background-color: #0F2B46;
+}
+
+footer #copyright {
+    text-align: center;
+    width: 100%;
+    padding: 15px;
+}

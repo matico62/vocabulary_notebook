@@ -1,0 +1,66 @@
+@charset "utf-8";
+
+body {
+    width: 100%;
+    color: #0F2B46;
+    background-color: #f7f7f7;
+    margin: 0 auto 100px;
+}
+
+main h1 {
+    font-size: 4rem;
+    text-align: center;
+}
+
+main h2 {
+    text-align: center;
+}
+
+main form {
+    width: 580px;
+    margin: 0 auto;
+}
+
+main fieldset {
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+main .flex {
+    display: flex;
+}
+
+main input {
+    margin: 0 10px;
+    font-size: 1.2rem;
+}
+
+main select {
+    margin: 0 10px;
+}
+
+main #sub {
+    width: 100%;
+    background-color: #0F2B46;
+    color: #fff;
+    margin: 20px auto;
+}
+
+main p {
+    color: #f00;
+    text-align: center;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: #fff;
+    background-color: #0F2B46;
+}
+
+footer #copyright {
+    text-align: center;
+    width: 100%;
+    padding: 15px;
+}

@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block css %}
+<link rel="stylesheet" href="{{url_for('static', filename='css/vocabulary_top.css')}}">
+{% endblock %}
+
+{% block content %}
+<h2>単語一覧</h2>
+<form action="{{url_for('vocabulary_search')}}">
+    <input type="search" name="search" placeholder="単語の検索">
+    <input type="submit" value="検索">
+</form>
+<div id="title">
+    <h3>単語</h3>
+    <h3>意味</h3>
+</div>
+<div id="list">
+    {% for i in word %}
+    <dl>
+        <dt>{{i[1]}}</dt>
+        <dd>{{i[2]}}</dd>
+    </dl>
+    {% endfor %}
+</div>
+<div id="button">
+    <a href="{{url_for('vocabulary_insert')}}">
+        <div>単語登録</div>
+    </a>
+    <a href="{{url_for('vocabulary_delete')}}">
+        <div>単語削除</div>
+    </a>
+</div>
+{% endblock %}

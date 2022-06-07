@@ -1,0 +1,64 @@
+@charset "utf-8";
+
+body {
+    text-align: center;
+    padding: 0;
+    margin: 0 0 100px;
+    width: 100%;
+    color: #0F2B46;
+    background-color: #f7f7f7;
+}
+
+body div {
+    text-align: left;
+    width: 400px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+main h1 {
+    font-size: 4rem;
+    text-align: center;
+}
+
+main div dl {
+    display: flex;
+}
+
+main div dt {
+    width: 200px;
+}
+
+main span {
+    font-weight: bold;
+}
+
+main p {
+    margin-top: 0;
+}
+
+main a {
+    color: #fff;
+    text-decoration: none;
+    background: #0F2B46;
+    padding: 20px 100px;
+    border-radius: 10px;
+}
+
+main a:hover {
+    background-color: #006494;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: #fff;
+    background-color: #0F2B46;
+}
+
+footer #copyright {
+    text-align: center;
+    width: 100%;
+    padding: 15px;
+}

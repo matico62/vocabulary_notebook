@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block css %}
+<link rel="stylesheet" href="{{url_for('static', filename='css/vocabulary_insert.css')}}">
+{% endblock %}
+
+{% block content %}
+<h2>単語登録</h2>
+<p>登録する単語と意味を入力してください</p>
+<form action="{{url_for('vocabulary_insert_result')}}">
+    <label for="word">単語：</label>
+    <input type="text" name="word" id="word">
+    <br>
+    <label for="meaning">意味：</label>
+    <input type="text" name="meaning" id="meaning">
+    {% if error != None %}
+    <p style="color: red;">{{error}}</p>
+    {% endif %}
+    <br>
+    <input type="submit" value="登録" id="sub">
+</form>
+{% endblock %}

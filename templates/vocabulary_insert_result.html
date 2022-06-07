@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block css %}
+<link rel="stylesheet" href="{{url_for('static', filename='css/vocabulary_result.css')}}">
+{% endblock %}
+
+{% block content %}
+
+    <h2>単語登録</h2>
+    <p>以下の単語を登録しました。</p>
+    <p>単語：  {{word[0]}}</p>
+    <p>意味：  {{word[1]}}</p>
+    <a href="{{url_for('vocabulary_top')}}">単語ＴＯＰへ戻る</a>
+{% endblock %}

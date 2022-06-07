@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="jp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/create_account.css')}}">
+    <link rel="icon" href="{{url_for('static', filename='favicon/favicon.ico')}}">
+    <title>英単語帳</title>
+</head>
+
+<body>
+    <main>
+        <h1>単語帳</h1>
+        <h2>アカウント登録</h2>
+        <form action="{{url_for('check_account')}}" method="POST">
+            <fieldset>
+                <legend>名前</legend>
+                <div class="flex">
+                    <div>
+                        <label for="last_name">性</label><br>
+                        <input type="text" name="last_name" id="last_name">
+                    </div>
+                    <div>
+                        <label for="first_name">名</label><br>
+                        <input type="text" name="first_name" id="first_name">
+                    </div>
+                </div>
+                <div class="flex">
+                    <div>
+                        <label for="last_fri">性（フリガナ）</label><br>
+                        <input type="text" name="last_fri" id="last_fri" required>
+                    </div>
+                    <div>
+                        <label for="first_fri">名（フリガナ）</label><br>
+                        <input type="text" name="first_fri" id="first_fri" required>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>生年月日</legend>
+                <div class="flex">
+                    <div>
+                        <label for="year">年</label><br>
+                        <select name="year" id="year">
+                            {% for i in year %}
+                            <option value="{{i}}">{{i}}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div>
+                        <label for="month">月</label><br>
+                        <select name="month" id="month">
+                            {% for i in month %}
+                            <option value="{{i}}">{{i}}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div>
+                        <label for="day">日</label><br>
+                        <select name="day" id="day">
+                            {% for i in day %}
+                            <option value="{{i}}">{{i}}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>メールアドレス</legend>
+                <input type="email" name="mail" id="mail" required>
+            </fieldset>
+            <fieldset>
+                <legend>パスワード</legend>
+                <input type="password" name="pw"><br>
+            </fieldset>
+            <input type="submit" value="確認" id="sub">
+        </form>
+        {% if error != None %}
+        <p>{{error}}</p>
+        {% endif %}
+    </main>
+    <footer>
+        <div id="copyright">
+            <small>&copy;Sasaki Yuuto 2020</small>
+        </div>
+    </footer>
+</body>
+
+</html>

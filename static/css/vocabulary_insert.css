@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+main {
+    text-align: center;
+    font-size: 2rem;
+    color: #0F2B46;
+    margin-bottom: 100px;
+}
+
+main input {
+    color: #0F2B46;
+    font-size: 2rem;
+    margin: 20px;
+}
+
+main #sub {
+    width: 60%;
+}

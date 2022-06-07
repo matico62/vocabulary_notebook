@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="jp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/check_account.css')}}">
+    <link rel="icon" href="{{url_for('static', filename='favicon/favicon.ico')}}">
+    <title>英単語帳</title>
+</head>
+
+<body>
+    <main>
+        <h1>単語帳</h1>
+        <h2>アカウント確認</h2>
+        <p>以下の内容でよろしければ登録ボタンを押してください</p>
+        <div>
+            <dl>
+                <dt>お名前：</dt>
+                <dd>{{tmp_account['first_name']}} {{tmp_account['last_name']}}</dd>
+            </dl>
+            <dl>
+                <dt>生年月日：</dt>
+                <dd>{{tmp_account['year']}}年{{tmp_account['month']}}月{{tmp_account['day']}}日</dd>
+            </dl>
+            <dl>
+                <dt>メールアドレス：</dt>
+                <dd>{{tmp_account['mail']}}</dd>
+            </dl>
+            <dl>
+                <dt>パスワード：</dt>
+                <dd>{{tmp_account['mask_pw']}}</dd>
+            </dl>
+        </div>
+        <a href="{{url_for('result_account')}}">登録</a>
+    </main>
+    <footer>
+        <div id="copyright">
+            <small>&copy;Sasaki Yuuto 2020</small>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block css %}
+<link rel="stylesheet" href="{{url_for('static', filename='css/vocabulary_delete.css')}}">
+{% endblock %}
+
+{% block content %}
+<h2>単語削除</h2>
+{% if error != None %}
+<p style="color: red;">{{error}}</p>
+{% endif %}
+<p>削除する単語を入力してください</p>
+<form action="{{url_for('vocabulary_delete')}}">
+    <input type="search" name="search" placeholder="単語の検索">
+    <input type="submit" value="検索">
+</form>
+<div id="title">
+    <h3>単語</h3>
+    <h3>意味</h3>
+</div>
+<form action="{{url_for('vocabulary_delete_result')}}">
+    <div id="list">
+        {% for i in word %}
+        <dl>
+            <dt>{{i[1]}}</dt>
+            <dd>{{i[2]}}</dd>
+            <dd><input type="checkbox" name="delete_checkbox" value="{{i[0]}}"></dd>
+        </dl>
+        {% endfor %}
+    </div>
+    <input type="submit" value="削除" id="sub">
+</form>
+{% endblock %}

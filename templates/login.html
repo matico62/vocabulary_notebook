@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="jp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/login.css')}}">
+    <link rel="icon" href="{{url_for('static', filename='favicon/favicon.ico')}}">
+    <title>単語帳</title>
+</head>
+
+<body>
+    <main>
+        <div>
+            <h1>単語帳</h1>
+            <h2>ログイン</h2>
+            <form action="{{url_for('top_post')}}" method="POST">
+                <label for="mail">メールアドレス：</label>
+                <input type="email" name="mail" id="mail">
+                <br>
+                <label for="pw">パスワード：</label>
+                <input type="password" name="pw" id="pw">
+                <br>
+                <input type="submit" value="ログイン" id="sub">
+            </form>
+            {% if error != None %}
+            <p style="color: red;">{{error}}</p>
+            {% endif %}
+            <p class="s1">アカウントをお持ちでない方はこちら</p>
+            <a href="{{url_for('create_account')}}">アカウント登録</a>
+        </div>
+    </main>
+    <footer>
+        <div id="copyright">
+            <small>&copy;Sasaki Yuuto 2020</small>
+        </div>
+    </footer>
+</body>
+
+</html>

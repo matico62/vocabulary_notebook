@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="jp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/layout.css')}}">
+    {% block css %}
+    {% endblock %}
+    <link rel="icon" href="{{url_for('static', filename='favicon/favicon.ico')}}">
+    <title>単語帳</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <a href="{{url_for('top_get')}}">
+                    <li>TOPページへ</li>
+                </a>
+                <a href="{{url_for('vocabulary_top')}}">
+                    <li>単語の検索・登録・削除</li>
+                </a>
+                <a href="{{url_for('quiz_top')}}">
+                    <li>単語クイズ</li>
+                </a>
+                <a href="{{url_for('logout')}}">
+                    <li>ログアウト</li>
+                </a>
+                </tr>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    <footer>
+        <div id="copyright">
+            <small>&copy;Sasaki Yuuto 2020</small>
+        </div>
+    </footer>
+</body>
+
+</html>

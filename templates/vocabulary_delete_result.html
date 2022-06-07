@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block css %}
+<link rel="stylesheet" href="{{url_for('static', filename='css/vocabulary_delete_result.css')}}">
+{% endblock %}
+
+{% block content %}
+
+<h2>単語削除</h2>
+<p>以下の単語を削除しました。</p>
+<div id="title">
+    <h3>単語</h3>
+    <h3>意味</h3>
+</div>
+<div id="list">
+    {% for i in word %}
+    <dl>
+        <dt>{{i[0]}}</dt>
+        <dd>{{i[1]}}</dd>
+    </dl>
+    {% endfor %}
+</div>
+<a href="{{url_for('vocabulary_top')}}">単語ＴＯＰへ戻る</a>
+{% endblock %}
